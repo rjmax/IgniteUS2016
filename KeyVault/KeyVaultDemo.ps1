@@ -8,7 +8,8 @@
 New-AzureRmResourceGroup -Name KeyVaultDemo -Location westus -Force
 
 #create the keyvault. note that this command is not idempotent.
-$vault = New-AzureRmKeyVault -VaultName Ignite2016 -ResourceGroupName KeyVaultDemo -EnabledForTemplateDeployment -Location westus
+#New-AzureRmKeyVault -VaultName Ignite2016 -ResourceGroupName KeyVaultDemo -EnabledForTemplateDeployment -Location westus
+$vault = Get-AzureRmKeyvault -VaultName Ignite2016 -ResourceGroupName KeyVaultDemo
 
 #create/set the secret
 $secret = Set-AzureKeyVaultSecret -VaultName Ignite2016 -Name MySecret -SecretValue $password
