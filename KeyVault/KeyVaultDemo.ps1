@@ -27,4 +27,4 @@ $TemplateParameterUri = "https://raw.githubusercontent.com/rjmax/IgniteUS2016/ma
 New-AzureRmResourceGroupDeployment -ResourceGroupName KeyVaultDemo -TemplateUri $TemplateUri -TemplateParameterUri $TemplateParameterUri
 
 #cleanup non-idempotent resources
-Remove-AzureRmKeyVault -VaultName Ignite2016 -ResourceGroupName KeyVaultDemo -Force
+#Remove-AzureRmKeyVault -VaultName Ignite2016 -ResourceGroupName KeyVaultDemo -Force
